@@ -9,7 +9,7 @@
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
 		"pretty": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\"",
-		"api": "node backend/api/index.js"
+		"api": "tsx backend/api/index.ts"
 	},
 	"dependencies": {
 		"dayjs": "^1.11.10",
@@ -19,6 +19,7 @@
 		"react-router-dom": "^6.18.0"
 	},
 	"devDependencies": {
+		"@types/express": "^4.17.21",
 		"@types/react": "^18.2.15",
 		"@types/react-dom": "^18.2.7",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -32,6 +33,7 @@
 		"prettier": "^3.0.3",
 		"sass": "^1.69.5",
 		"tailwindcss": "^3.3.5",
+		"tsx": "^4.7.0",
 		"typescript": "^5.0.2",
 		"vite": "^4.4.5"
 	}
