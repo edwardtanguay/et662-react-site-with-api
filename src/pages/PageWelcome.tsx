@@ -1,5 +1,21 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+const backendUrl = 'http://localhost:5112'; 
+
 export const PageWelcome = () => {
+	const [appName, setAppName] = useState('');
+
+	useEffect(() => {
+		(async () => {
+			const response = await axios.get(backendUrl);
+			const _appName = response.data.appName;
+			setAppName(_appName);
+		})();
+	}, []);
+
 	return (
-		<p>This is the welcome page.</p>
+		<p>APP NAME: {appName}</p>
+		
 	)
 }
