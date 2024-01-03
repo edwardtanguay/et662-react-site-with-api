@@ -1,3 +1,4 @@
+import * as config from '../config';
 import express from 'express';
 
 const app = express();
@@ -5,7 +6,7 @@ const port = 5112;
 
 app.get('/', (req, res) => {
 	res.json({
-		appName: 'et662-react-site-with-api'
+		appName: config.getAppName()
 	});
 });
 
